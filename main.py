@@ -74,6 +74,21 @@ def load_config_from_snowflake():
         )
     return grouped
 
+def rename_fault_foder():
+    base_dir = "gx/uncommited"
+    old_folder_name = "fault_foder"
+    new_folder_name = "fault_folder"
+
+    for root, dirs, files in os.walk(base_dir):
+        for dir_name in dirs:
+            if dir_name == old_folder_name:
+                old_path = os.path.join(root, dir_name)
+                new_path = os.path.join(root, new_folder_name)
+                try:
+                    os.rename(old_path, new_path)
+                    print(f"Renamed: {old_path} -> {new_path}")
+                except Exception as e:
+                    print(f"Failed to rename {old_path}: {e}")
 
 def monitor_all_tables():
     context = get_context()
@@ -141,3 +156,4 @@ def monitor_all_tables():
 
 if __name__ == "__main__":
     monitor_all_tables()
+    rename_fault_foder()
