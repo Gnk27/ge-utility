@@ -3,7 +3,7 @@ name: run ge-main
 on:
   schedule:
     - cron: '0 15 * * *' # every day at 15:00 UTC
-  workflow_dispatch # allow manual trigger of the workflow
+  workflow_dispatch: # allow manual trigger of the workflow
  
 jobs:
   build:
