@@ -129,7 +129,7 @@ def monitor_all_tables():
 
         # Get results as JSON
         # result_json = result.to_json_dict()
-        # print(json.dumps(result_json, indent=2))
+        # print(json.dumps(result_json, indent=2))        
 
         context.build_data_docs(site_names=["local_site"])
         context.open_data_docs()
