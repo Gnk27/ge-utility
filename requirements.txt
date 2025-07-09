@@ -1,4 +1,4 @@
-great_expectations==0.18.21
+great_expectations==0.18.22
 snowflake-connector-python==3.15.0
 snowflake-sqlalchemy==1.7.5
 python-dotenv==1.1.1

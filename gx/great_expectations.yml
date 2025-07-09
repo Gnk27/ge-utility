@@ -106,8 +106,7 @@ fluent_datasources:
         batch_metadata: {}
         table_name: TEST_DATES
         schema_name: nt
-    connection_string: 
-      snowflake://gmarquez:vuxbub-dipde7-zawmAr@PKTRUBN-PK64038/XLAB_JSEPULVEDA/NT?warehouse=XLAB_JSEPULVEDA__WH
+    connection_string: snowflake://gmarquez:vuxbub-dipde7-zawmAr@PKTRUBN-PK64038/XLAB_JSEPULVEDA/NT?warehouse=XLAB_JSEPULVEDA__WH
 notebooks:
 include_rendered_content:
   globally: false
