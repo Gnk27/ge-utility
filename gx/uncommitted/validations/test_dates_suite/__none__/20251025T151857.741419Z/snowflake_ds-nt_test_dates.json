@@ -1,0 +1,94 @@
+{
+  "evaluation_parameters": {},
+  "meta": {
+    "active_batch_definition": {
+      "batch_identifiers": {},
+      "data_asset_name": "nt_test_dates",
+      "data_connector_name": "fluent",
+      "datasource_name": "snowflake_ds"
+    },
+    "batch_markers": {
+      "ge_load_time": "20251025T151857.751120Z"
+    },
+    "batch_spec": {
+      "batch_identifiers": {},
+      "data_asset_name": "nt_test_dates",
+      "schema_name": "nt",
+      "table_name": "TEST_DATES",
+      "type": "table"
+    },
+    "checkpoint_id": null,
+    "checkpoint_name": "test_dates_suite_checkpoint",
+    "expectation_suite_name": "test_dates_suite",
+    "great_expectations_version": "0.18.22",
+    "run_id": {
+      "run_name": null,
+      "run_time": "2025-10-25T15:18:57.741419+00:00"
+    },
+    "validation_id": null,
+    "validation_time": "20251025T151857.755916Z"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "snowflake_ds-nt_test_dates",
+          "column": "ID"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 200000,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "batch_id": "snowflake_ds-nt_test_dates",
+          "column": "EVENT_DATE",
+          "max_value": "2025-12-02",
+          "min_value": "2025-01-01"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 200000,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 2,
+    "success_percent": 100.0,
+    "successful_expectations": 2,
+    "unsuccessful_expectations": 0
+  },
+  "success": true
+}
